@@ -1,0 +1,23 @@
+{
+  "name": "js_interactivity",
+  "version": "1.0.0",
+  "description": "Interactivity with Javascript",
+  "main": "index.js",
+  "scripts": {
+    "devLite": "live-server",
+    "start": "npm run devLite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timzo31/JS_Interactivity.git"
+  },
+  "author": "TIMERA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timzo31/JS_Interactivity/issues"
+  },
+  "homepage": "https://github.com/timzo31/JS_Interactivity#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
