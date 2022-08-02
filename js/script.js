@@ -39,3 +39,16 @@ const x = 12;
 console.log(x == "12");
 console.log(x === "12");
 console.log(x !== "12");
+
+console.log("------------ FUNCTIONS -----------");
+
+function welcomeMessage() {
+  const user = prompt("Whats's your name? ");
+  const msg = `welcome dear ${user}`;
+
+  alert(msg);
+
+  setTimeout(() => console.log(msg), 3000);
+}
+
+welcomeMessage();
