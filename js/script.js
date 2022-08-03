@@ -3,7 +3,7 @@
 
 //alert("Hello world");
 //prompt("Put your name:");
-document.write("<h1>Time to learn Javascript</h1>");
+//document.write("<h1>Time to learn Javascript</h1>");
 
 document.getElementById("test").innerHTML = "Hello World!";
 
@@ -22,7 +22,7 @@ console.log(Date.now());
 /////////// DATA TYPES /////////////
 
 const width = window.innerWidth;
-console.log(width);
+console.log("Scren width = " + width + "px");
 
 const locat = window.location;
 const status = false;
@@ -40,6 +40,8 @@ console.log(x == "12");
 console.log(x === "12");
 console.log(x !== "12");
 
+/////////// FUNCTIONS /////////////
+
 console.log("------------ FUNCTIONS -----------");
 
 function welcomeMessage() {
@@ -50,5 +52,80 @@ function welcomeMessage() {
 
   setTimeout(() => console.log(msg), 3000);
 }
+//welcomeMessage();
 
-welcomeMessage();
+/////////// EVENTS /////////////
+
+const btnDisplayDate = document.getElementsByClassName("displayDate");
+const dateTxt = document.querySelector(".date");
+
+const displayDate = () => {
+  dateTxt.textContent = Date();
+};
+
+const btnFirst = document.querySelector(".first");
+const btnSecond = document.querySelector(".second");
+const stuff = document.getElementById("stuff");
+
+btnFirst.addEventListener("click", function () {
+  stuff.innerHTML = "Clicked first button";
+});
+btnSecond.addEventListener("click", function () {
+  stuff.innerHTML = "Clicked second button";
+});
+//----------------------------------
+
+const btn_open = document.querySelector(".btn-open");
+const btn_close = document.querySelector(".btn-close");
+const btn_switch = document.querySelector(".btn-switch");
+const details = document.getElementById("details");
+
+const openDetails = () => {
+  details.classList.add("open");
+  details.classList.remove("closed");
+};
+
+const closeDetails = () => {
+  details.classList.add("closed");
+  details.classList.remove("copen");
+};
+
+btn_open.addEventListener("click", openDetails);
+btn_close.addEventListener("click", closeDetails);
+
+btn_switch.addEventListener("click", function () {
+  details.classList.toggle("closed");
+});
+
+/////////////  IMAGE  ///////////////
+const imgs = document.querySelectorAll(".img");
+const gallery = document.querySelector(".gallery");
+const btnCloseModal = document.querySelector(".close_modal");
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+const imgContainer = document.querySelector(".img-container");
+
+const openModal = () => {
+  overlay.classList.remove("hidden");
+  modal.classList.remove("hidden");
+};
+
+const closeModal = () => {
+  overlay.classList.add("hidden");
+  modal.classList.add("hidden");
+};
+
+overlay.addEventListener("click", closeModal);
+btnCloseModal.addEventListener("click", closeModal);
+
+// imgs.forEach((img) => img.addEventListener("click", openModal));
+imgs.forEach((img) => {
+  img.addEventListener("click", function (e) {
+    //console.log(e.target.getAttribute("src"));
+    const imgSource = e.target.getAttribute("src");
+    const image = `<img src="${imgSource}" alt="" />`;
+    imgContainer.insertAdjacentHTML("afterbegin", image);
+    openModal();
+  });
+});
+///////////////////////////////////////////////

@@ -1,0 +1,173 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  padding: 0.2rem 2rem;
+}
+
+.dom_manip {
+  padding: 0 3rem;
+}
+
+.dom_title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  padding: 0.2rem 1rem;
+  transform: skewX(-20deg);
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  background-color: cyan;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  transform: skewX(-30deg);
+}
+
+#details {
+  background-color: #777;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* ///////////////////////////////////////// */
+/*////// Images Box ///////*/
+.img-block {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.img:hover {
+  transform: scale(1.2);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 85vh;
+  width: 60%;
+  padding: 6rem 4rem;
+  background-color: #333;
+  z-index: 10;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.close_modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 4rem;
+  color: aqua;
+}
+
+.img-container {
+  position: relative;
+  /* overflow: scroll; */
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  object-fit: cover;
+}
+/* ///////////////////////////////////////// */
+/* JS classes */
+.dom_title-hover {
+  transform: scale(1.2);
+  background-color: yellow;
+  color: #f00;
+}
+
+.open {
+  display: block;
+}
+
+.closed {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}

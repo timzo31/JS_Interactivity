@@ -4,16 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <title>Javascript Interactivity</title>
   </head>
   <body>
+    <header class="header">
+      <div class="menu"></div>
+    </header>
     <h1 id="test">Tester</h1>
-    <div></div>
+    <div onclick="welcomeMessage()">Click on this !</div>
 
     <div></div>
 
-    <div></div>
+    <div>
+      <p id="output"></p>
+      <p class="demo">This is a paragraph</p>
+
+      <button type="button" class="displayDate" onClick="displayDate()">
+        Display Date
+      </button>
+      <p class="date"></p>
+    </div>
+    <hr />
+    <div class="dom_manip mb">
+      <h1 class="dom_title">Modify the DOM</h1>
+      <button class="first" type="button">First</button>
+      <button class="second" type="button">Second</button>
+
+      <p class="bd">This code should not change</p>
+      <p id="stuff" class="bd">This will change</p>
+      <p class="bd">This code should not change either</p>
+    </div>
+
+    <hr />
+
+    <div class="dom_manip mb">
+      <h1 class="dom_title mb">
+        <span class="highlight">DOM</span> Manipulations
+      </h1>
+      <div class="btn-group mb">
+        <button class="btn btn-open" type="button">Open</button>
+        <button class="btn btn-close" type="button">Close</button>
+        <button class="btn btn-switch" type="button">Switch</button>
+      </div>
+
+      <p id="details" class="bd mb">
+        Extra details... You can open and close this paragraphusing the buttons
+        above.
+      </p>
+    </div>
+
+    <hr />
+
+    <div class="gallery mb mt">
+      <figure class="gallery-item">
+        <img src="img/img-1.jpg" alt="Image 1" class="img img -1" />
+      </figure>
+      <figure class="gallery-item">
+        <img src="img/img-2.jpg" alt="Image 2" class="img img-2" />
+      </figure>
+      <figure class="gallery-item">
+        <img src="img/img-3.jpg" alt="Image 3" class="img img-3" />
+      </figure>
+      <figure class="gallery-item">
+        <img src="img/img-4.jpg" alt="Image 4" class="img img-4" />
+      </figure>
+    </div>
+
+    <div class="modal hidden">
+      <button class="close_modal">&times;</button>
+      <div class="img-container"></div>
+    </div>
+    <div class="overlay hidden"></div>
 
     <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
