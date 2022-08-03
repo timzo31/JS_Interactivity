@@ -129,3 +129,18 @@ imgs.forEach((img) => {
   });
 });
 ///////////////////////////////////////////////
+////////////  ARRAYS  ////////////
+
+const nbElectPerDept = document.querySelector(".arr_nb_elect");
+const totalElect = document.querySelector(".total_elect");
+const avgElect = document.querySelector(".avg_elect");
+const largestDept = document.querySelector(".largest_dept");
+const lowestDept = document.querySelector(".lowest_dept");
+
+const nb_electors = [560000, 32000, 25900, 300000, 400000, 20000];
+
+///////////////////////////////////////////////
+////////////  FORMS  ////////////
+const inputName = document.querySelector(".input_name");
+const username = document.querySelector(".username");
+const welcomeMsg = document.querySelector(".welcome_msg");

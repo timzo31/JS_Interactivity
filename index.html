@@ -27,7 +27,7 @@
       <p class="date"></p>
     </div>
     <hr />
-    <div class="dom_manip mb">
+    <div class="dom_manip mb-2">
       <h1 class="dom_title">Modify the DOM</h1>
       <button class="first" type="button">First</button>
       <button class="second" type="button">Second</button>
@@ -39,25 +39,29 @@
 
     <hr />
 
-    <div class="dom_manip mb">
-      <h1 class="dom_title mb">
+    <div class="dom_manip mb-2">
+      <h1 class="dom_title mb-2">
         <span class="highlight">DOM</span> Manipulations
       </h1>
-      <div class="btn-group mb">
-        <button class="btn btn-open" type="button">Open</button>
-        <button class="btn btn-close" type="button">Close</button>
-        <button class="btn btn-switch" type="button">Switch</button>
-      </div>
+      <div class="container-box">
+        <div class="content-box">
+          <div class="btn-group mb">
+            <button class="btn btn-open" type="button">Open</button>
+            <button class="btn btn-close" type="button">Close</button>
+            <button class="btn btn-switch" type="button">Switch</button>
+          </div>
 
-      <p id="details" class="bd mb">
-        Extra details... You can open and close this paragraphusing the buttons
-        above.
-      </p>
+          <p id="details" class="bd mb-2">
+            Extra details... You can open and close this paragraphusing the
+            buttons above.
+          </p>
+        </div>
+      </div>
     </div>
 
     <hr />
 
-    <div class="gallery mb mt">
+    <div class="gallery mb-2 mt-2">
       <figure class="gallery-item">
         <img src="img/img-1.jpg" alt="Image 1" class="img img -1" />
       </figure>
@@ -72,6 +76,68 @@
       </figure>
     </div>
 
+    <hr />
+
+    <!-- ARRAYS -->
+    <div class="arrays mb-2 mt-2">
+      <h1 class="arr_title">
+        Javascript <span class="highlight">Arrays</span>
+      </h1>
+
+      <div class="nb_electors_content mt-2">
+        <div class="row">
+          <button class="btn btn_arr">
+            Number of electors per department:
+          </button>
+          <p class="arr_nb_elect"></p>
+        </div>
+        <div class="row">
+          <button class="btn btn_arr">Total Number of Electors:</button>
+          <p class="total_elect"></p>
+        </div>
+        <div class="row">
+          <button class="btn btn_arr">Average Number of Electors:</button>
+          <p class="avg_elect"></p>
+        </div>
+        <div class="row">
+          <button class="btn btn_arr">Largest Number of Electors:</button>
+          <p class="largest_dept"></p>
+        </div>
+        <div class="row">
+          <button class="btn btn_arr">Lowest Number of Electors:</button>
+          <p class="lowest_dept"></p>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="form mt-2">
+      <h1 class="form_title mb-2">
+        Javascript <span class="highlight">Forms</span>
+      </h1>
+      <form action="">
+        <div class="form_row">
+          <label for="name" class="label_name">Name: </label>
+          <input
+            type="text"
+            class="input_name"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="welcome-box mt-1">
+          <p class="welcome_msg hidden">
+            Hello <span class="username"></span> . Welcome to Javascript
+            Interactivity Course.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- END ARRAYS -->
+
+    <!-- MODAL -->
     <div class="modal hidden">
       <button class="close_modal">&times;</button>
       <div class="img-container"></div>
