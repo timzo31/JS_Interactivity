@@ -121,55 +121,180 @@
         Javascript <span class="highlight">Forms</span>
       </h1>
       <form action="">
-        <div class="form_row">
-          <label for="name" class="label_name">Name: </label>
-          <input
-            type="text"
-            class="input_name"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
-          />
-        </div>
-        <div class="form_row">
-          <label for="email" class="label_email">Email: </label>
-          <input
-            type="email"
-            class="input_email"
-            name="email"
-            id="email"
-            placeholder="Enter your e-mail address"
-          />
-        </div>
-        <div class="form_row">
-          <label for="password" class="label_password">Password: </label>
-          <input
-            type="password"
-            class="input_password"
-            name="password"
-            id="password"
-            placeholder="Enter your password"
-          />
-        </div>
-        <div class="form_row">
-          <label for="confirm_pwd" class="label_confirm_pwd">
-            confirm Password:
-          </label>
-          <input
-            type="password"
-            class="input_confirm_pwd"
-            name="confirm_pwd"
-            id="confirm_pwd"
-            placeholder="confirm your password"
-          />
-        </div>
+        <fieldset class="fieldset-reg">
+          <legend class="legend">Registration Form</legend>
+          <div class="form_row">
+            <label for="name" class="label_name">Name: </label>
+            <input
+              type="text"
+              class="input_name"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form_row">
+            <label for="email" class="label_email">Email: </label>
+            <input
+              type="email"
+              class="input_email"
+              name="email"
+              id="email"
+              placeholder="Enter your e-mail address"
+            />
+          </div>
+          <div class="form_row">
+            <label for="phone" class="label_phone"> Phone Number: </label>
+            <input
+              type="phone"
+              class="input_phone"
+              name="phone"
+              id="phone"
+              placeholder="Eg: +221771858628"
+            />
+          </div>
 
-        <div class="welcome-box mt-1">
-          <p class="welcome_msg hidden">
-            Hello <span class="username"></span> . Welcome to Javascript
-            Interactivity Course.
-          </p>
-        </div>
+          <div class="form_row">
+            <label for="password" class="label_password">Password: </label>
+            <input
+              type="password"
+              class="input_password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="form_row">
+            <label for="confirm_pwd" class="label_confirm_pwd">
+              Confirm Password:
+            </label>
+            <input
+              type="password"
+              class="input_confirm_pwd"
+              name="confirm_pwd"
+              id="confirm_pwd"
+              placeholder="confirm your password"
+            />
+          </div>
+
+          <div class="form_row">
+            <label for="birthday" class="label_birthday">
+              Date of birth:
+            </label>
+            <input
+              type="date"
+              class="input_birthday"
+              name="birthday"
+              id="birthday"
+              placeholder="Enter your birthday"
+            />
+          </div>
+
+          <div class="form_row">
+            <label for="sexe" class="label_sexe"> Sexe: </label>
+            <div class="row-sexe">
+              <div class="male">
+                <label for="sexeM">Male</label>
+                <input
+                  type="radio"
+                  class="input_sexeM"
+                  name="sexe"
+                  id="sexeM"
+                />
+              </div>
+              <div class="female">
+                <label for="sexeF">Female</label>
+                <input
+                  type="radio"
+                  class="input_sexeF"
+                  name="sexe"
+                  id="sexeF"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form_row">
+            <label for="pwd_res_options" class="label_pwd_res_options">
+              Password Reset Options:
+            </label>
+            <div class="reset_options">
+              <div class="opt_email">
+                <input
+                  type="checkbox"
+                  class="input_pwd_res_options"
+                  name="pwd_res_email"
+                  id="pwd_res_email"
+                />
+                <label for="">Via email</label>
+              </div>
+              <div class="opt_phone">
+                <input
+                  type="checkbox"
+                  class="input_pwd_res_options"
+                  name="pwd_res_phone"
+                  id="pwd_res_phone"
+                />
+                <label for="">Via phone number</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_row">
+            <label for="fav_number" class="label_fav_number">
+              Favourite Number:
+            </label>
+            <input
+              type="number"
+              class="input_fav_number"
+              name="fav_number"
+              id="fav_number"
+              placeholder="Enter your favourite number"
+            />
+          </div>
+
+          <div class="form_row">
+            <label for="fav_color" class="label_fav_color">
+              Favourite Color:
+            </label>
+            <input
+              type="color"
+              class="input_fav_color"
+              name="fav_color"
+              id="fav_color"
+            />
+          </div>
+
+          <div class="form_row">
+            <label for="height" class="label_height"> Height: </label>
+            <input
+              type="range"
+              class="input_height"
+              name="height"
+              id="height"
+              min="120"
+              max="230"
+            />
+          </div>
+
+          <div class="form_row">
+            <label for="webUrl" class="label_webUrl"> Website URL: </label>
+            <input type="url" class="input_webUrl" name="webUrl" id="webUrl" />
+          </div>
+
+          <div class="form_row">
+            <label for="message" class="label_message"> Your Message: </label>
+            <textarea name="message" id="message" rows="10" cols="35">
+            </textarea>
+          </div>
+
+          <div class="form_row btn-row mb-2">
+            <button type="reset" class="btn btn-reset">Reset</button>
+            <button type="submit" class="btn btn-register">Register</button>
+          </div>
+
+          <div class="welcome-box mt-1"></div>
+        </fieldset>
       </form>
     </div>
 

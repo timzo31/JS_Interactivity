@@ -138,13 +138,15 @@ const largestDept = document.querySelector(".largest_dept");
 const lowestDept = document.querySelector(".lowest_dept");
 const arrElectors = document.querySelector(".arr_elect");
 
-const nb_electors = [560000, 32000, 25900, 300000, 400000, 20000];
+const nb_electors = [560000, , , 32000, 25900, 300000, 400000, , 20000];
 
 if (nb_electors.length > 0) {
   for (const val of nb_electors) {
-    const html = `<p class="arr_nb_elect">${val}</p>`;
+    if (val != undefined) {
+      const html = `<p class="arr_nb_elect">${val}</p>`;
 
-    arrElectors.insertAdjacentHTML("beforeend", html);
+      arrElectors.insertAdjacentHTML("beforeend", html);
+    }
   }
 } else {
   arrElectors.insertAdjacentHTML("beforeend", "Empty array");
@@ -152,23 +154,29 @@ if (nb_electors.length > 0) {
 
 // Total number of electors & average number
 let sum = 0;
+let count = 0;
 if (nb_electors.length > 0) {
   for (const electors of nb_electors) {
-    sum += electors;
+    if (electors != undefined) {
+      sum += electors;
+      count = count + 1;
+    }
   }
   totalElect.textContent = `${sum}`;
-  avgElect.textContent = `${Math.trunc(sum / nb_electors.length)}`;
+  avgElect.textContent = `${Math.trunc(sum / count)}`;
 }
 
 //  Largest number of electors per departement
 let min = (max = nb_electors[0]);
 if (nb_electors.length > 0) {
   for (let i = 0; i < nb_electors.length; i++) {
-    if (min > nb_electors[i]) {
-      min = nb_electors[i];
-    }
-    if (max < nb_electors[i]) {
-      max = nb_electors[i];
+    if (nb_electors[i] != undefined) {
+      if (min > nb_electors[i]) {
+        min = nb_electors[i];
+      }
+      if (max < nb_electors[i]) {
+        max = nb_electors[i];
+      }
     }
   }
   largestDept.textContent = `${max}`;
@@ -180,7 +188,13 @@ if (nb_electors.length > 0) {
 const inputName = document.querySelector(".input_name");
 const username = document.querySelector(".username");
 const welcomeMsg = document.querySelector(".welcome_msg");
+const welcomeBox = document.querySelector(".welcome-box");
 
-if (inputName.length > 0) {
-  username.textContent = `${inputName}`;
+if (inputName.length != 0) {
+  const html = `
+      <p class="welcome_msg">
+        Hello <span class="username">${inputName}</span>, Welcome to Javascript Interactivity Course.
+      </p>
+  `;
+  welcomeBox.insertAdjacentHTML("afterbegin", html);
 }
