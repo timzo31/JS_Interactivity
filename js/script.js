@@ -140,33 +140,40 @@ const arrElectors = document.querySelector(".arr_elect");
 
 const nb_electors = [560000, 32000, 25900, 300000, 400000, 20000];
 
-for (const val of nb_electors) {
-  const html = `<p class="arr_nb_elect">${val}</p>`;
+if (nb_electors.length > 0) {
+  for (const val of nb_electors) {
+    const html = `<p class="arr_nb_elect">${val}</p>`;
 
-  arrElectors.insertAdjacentHTML("beforeend", html);
+    arrElectors.insertAdjacentHTML("beforeend", html);
+  }
+} else {
+  arrElectors.insertAdjacentHTML("beforeend", "Empty array");
 }
 
 // Total number of electors & average number
 let sum = 0;
-for (const electors of nb_electors) {
-  sum += electors;
+if (nb_electors.length > 0) {
+  for (const electors of nb_electors) {
+    sum += electors;
+  }
+  totalElect.textContent = `${sum}`;
+  avgElect.textContent = `${Math.trunc(sum / nb_electors.length)}`;
 }
-totalElect.textContent = `${sum}`;
-avgElect.textContent = `${Math.trunc(sum / nb_electors.length)}`;
 
 //  Largest number of electors per departement
 let min = (max = nb_electors[0]);
-console.log(min, max);
-for (let i = 0; i < nb_electors.length; i++) {
-  if (min > nb_electors[i]) {
-    min = nb_electors[i];
+if (nb_electors.length > 0) {
+  for (let i = 0; i < nb_electors.length; i++) {
+    if (min > nb_electors[i]) {
+      min = nb_electors[i];
+    }
+    if (max < nb_electors[i]) {
+      max = nb_electors[i];
+    }
   }
-  if (max < nb_electors[i]) {
-    max = nb_electors[i];
-  }
+  largestDept.textContent = `${max}`;
+  lowestDept.textContent = `${min}`;
 }
-largestDept.textContent = `${max}`;
-lowestDept.textContent = `${min}`;
 
 ///////////////////////////////////////////////
 ////////////  FORMS  ////////////

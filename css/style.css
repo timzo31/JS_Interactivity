@@ -246,11 +246,22 @@ body {
   gap: 2rem;
 }
 
-.label_name {
+label {
+  width: 15rem;
+  text-align: right;
+}
+
+.label_name,
+.label_email,
+.label_password,
+.label_confirm_pwd {
   font-size: 1.8rem;
 }
 
-.input_name {
+.input_name,
+.input_email,
+.input_password,
+.input_confirm_pwd {
   padding: 0.3rem 1rem;
   border: none;
   outline: none;
@@ -260,7 +271,13 @@ body {
 }
 
 .input_name:hover,
-.input_name:active {
+.input_name:active,
+.input_email:hover,
+.input_email:active,
+.input_password:hover,
+.input_password:active,
+.input_confirm_pwd:hover,
+.input_confirm_pwd:active {
   background-color: #c5f4f4e7;
   border-radius: 1rem;
 }
@@ -271,26 +288,19 @@ body {
   font-size: 1.6rem;
 }
 
-.label_email {
-  font-size: 1.8rem;
-}
-
-.input_email {
-  padding: 0.3rem 1rem;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #777;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-}
-
-.input_email:hover,
-.input_email:active {
-  background-color: #c5f4f4e7;
-  border-radius: 1rem;
-}
-
 .input_email::placeholder {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.6rem;
+}
+
+.input_password::placeholder {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.6rem;
+}
+
+.input_confirm_pwd::placeholder {
   text-align: center;
   font-style: italic;
   font-size: 1.6rem;
