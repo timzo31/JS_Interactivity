@@ -89,7 +89,7 @@
           <button class="btn btn_arr">
             Number of electors per department:
           </button>
-          <p class="arr_nb_elect"></p>
+          <div class="arr_elect"></div>
         </div>
         <div class="row">
           <button class="btn btn_arr">Total Number of Electors:</button>
@@ -100,11 +100,15 @@
           <p class="avg_elect"></p>
         </div>
         <div class="row">
-          <button class="btn btn_arr">Largest Number of Electors:</button>
+          <button class="btn btn_arr">
+            Largest Number of Electors per departement:
+          </button>
           <p class="largest_dept"></p>
         </div>
         <div class="row">
-          <button class="btn btn_arr">Lowest Number of Electors:</button>
+          <button class="btn btn_arr">
+            Lowest Number of Electors per eepartement:
+          </button>
           <p class="lowest_dept"></p>
         </div>
       </div>
@@ -126,6 +130,16 @@
             placeholder="Enter your name"
           />
         </div>
+        <div class="form_row">
+          <label for="email" class="label_email">Email: </label>
+          <input
+            type="email"
+            class="input_email"
+            name="email"
+            placeholder="Enter your e-mail address"
+          />
+        </div>
+
         <div class="welcome-box mt-1">
           <p class="welcome_msg hidden">
             Hello <span class="username"></span> . Welcome to Javascript

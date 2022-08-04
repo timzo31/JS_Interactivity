@@ -191,24 +191,44 @@ body {
 }
 
 .row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.btn btn_arr {
+.btn_arr {
+}
+
+.arr_elect {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .arr_nb_elect {
+  font-size: 1.8rem;
+  font-weight: 600;
+  /* display: inline-block; */
 }
 
 .total_elect {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .avg_elect {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .largest_dept {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .lowest_dept {
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 /* ////////////////////////////// */
@@ -227,6 +247,7 @@ body {
 }
 
 .label_name {
+  font-size: 1.8rem;
 }
 
 .input_name {
@@ -245,6 +266,31 @@ body {
 }
 
 .input_name::placeholder {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.6rem;
+}
+
+.label_email {
+  font-size: 1.8rem;
+}
+
+.input_email {
+  padding: 0.3rem 1rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.input_email:hover,
+.input_email:active {
+  background-color: #c5f4f4e7;
+  border-radius: 1rem;
+}
+
+.input_email::placeholder {
   text-align: center;
   font-style: italic;
   font-size: 1.6rem;
