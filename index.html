@@ -120,7 +120,7 @@
       <h1 class="form_title mb-2">
         Javascript <span class="highlight">Forms</span>
       </h1>
-      <form action="">
+      <form action="" novalidate>
         <fieldset class="fieldset-reg">
           <legend class="legend">Registration Form</legend>
           <div class="form_row">
@@ -130,9 +130,11 @@
               class="input_name"
               name="name"
               id="name"
-              placeholder="Enter your name"
+              placeholder="Eg: TIMERA Mamadou"
+              required
             />
           </div>
+
           <div class="form_row">
             <label for="email" class="label_email">Email: </label>
             <input
@@ -141,8 +143,26 @@
               name="email"
               id="email"
               placeholder="Enter your e-mail address"
+              required
             />
           </div>
+
+          <div class="form_row">
+            <label for="confirm_email" class="label_confirm_email"
+              >Confirm Email:
+            </label>
+            <input
+              type="email"
+              class="input_confirm_email"
+              name="confirm_email"
+              id="confirm_email"
+              placeholder="Confirm your e-mail address"
+              onchange="return checkEmail()"
+              required
+            />
+            <p class="info-alert"></p>
+          </div>
+
           <div class="form_row">
             <label for="phone" class="label_phone"> Phone Number: </label>
             <input
@@ -151,6 +171,7 @@
               name="phone"
               id="phone"
               placeholder="Eg: +221771858628"
+              required
             />
           </div>
 
@@ -162,8 +183,10 @@
               name="password"
               id="password"
               placeholder="Enter your password"
+              required
             />
           </div>
+
           <div class="form_row">
             <label for="confirm_pwd" class="label_confirm_pwd">
               Confirm Password:
@@ -174,7 +197,10 @@
               name="confirm_pwd"
               id="confirm_pwd"
               placeholder="confirm your password"
+              onchange="return checkPassword()"
+              required
             />
+            <p class="info-alert_pwd"></p>
           </div>
 
           <div class="form_row">
@@ -187,6 +213,7 @@
               name="birthday"
               id="birthday"
               placeholder="Enter your birthday"
+              required
             />
           </div>
 
@@ -200,6 +227,7 @@
                   class="input_sexeM"
                   name="sexe"
                   id="sexeM"
+                  checked
                 />
               </div>
               <div class="female">
@@ -215,6 +243,61 @@
           </div>
 
           <div class="form_row">
+            <label for="location" class="label_location"> Location: </label>
+
+            <select
+              class="input_country"
+              name="country"
+              id="country"
+              onchange="countrySet()"
+              required
+            >
+              <option value="">Select country</option>
+              <option value="Sénégal">Sénégal</option>
+              <option value="Mali">Mali</option>
+              <option value="Guinee Conakry">Guinée Conakry</option>
+            </select>
+
+            <select
+              type="text"
+              class="input_city"
+              name="city"
+              id="city"
+              required
+            >
+              <option value="">Select city</option>
+              <option value="Dakar">Dakar</option>
+              <option value="Saint-Louis">Saint-Louis</option>
+              <option value="Tambacounda">Tambacounda</option>
+            </select>
+          </div>
+
+          <div class="form_row">
+            <label for="address" class="label_address"> Address: </label>
+            <input
+              type="text"
+              class="input_address"
+              name="address"
+              id="address"
+              placeholder="Enter your address"
+              required
+            />
+          </div>
+
+          <div class="form_row">
+            <label for="zip" class="label_zip"> Zip Code: </label>
+            <input
+              type="zip"
+              class="input_zip"
+              name="zip"
+              id="zip"
+              placeholder="Eg: 20450"
+              pattern="[0-9]{5}"
+              required
+            />
+          </div>
+
+          <div class="form_row">
             <label for="pwd_res_options" class="label_pwd_res_options">
               Password Reset Options:
             </label>
@@ -222,22 +305,38 @@
               <div class="opt_email">
                 <input
                   type="checkbox"
-                  class="input_pwd_res_options"
+                  class="input_pwd_res_email"
                   name="pwd_res_email"
                   id="pwd_res_email"
+                  value="Reset by email"
                 />
                 <label for="">Via email</label>
               </div>
               <div class="opt_phone">
                 <input
                   type="checkbox"
-                  class="input_pwd_res_options"
+                  class="input_pwd_res_phone"
                   name="pwd_res_phone"
                   id="pwd_res_phone"
+                  value="Reset by phone"
+                  onchange="resetOptionPhone()"
                 />
                 <label for="">Via phone number</label>
               </div>
             </div>
+          </div>
+
+          <div class="form_row form_row_conf hidden">
+            <label for="confirm_number" class="label_confirm_number">
+              Confirm phone number:
+            </label>
+            <input
+              type="phone"
+              class="input_confirm_number"
+              name="confirm_number"
+              id="confirm_number"
+              placeholder="Confirm your number"
+            />
           </div>
 
           <div class="form_row">

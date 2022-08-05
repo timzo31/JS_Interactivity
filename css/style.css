@@ -309,7 +309,11 @@ label {
 .label_fav_number,
 .label_fav_color,
 .label_height,
-.label_message {
+.label_message,
+.label_confirm_email,
+.label_zip,
+.label_address,
+.label_confirm_number {
   font-size: 1.8rem;
 }
 
@@ -322,7 +326,13 @@ label {
 .input_webUrl,
 .input_fav_number,
 .input_height,
-.input_message {
+.input_message,
+.input_confirm_email,
+.input_zip,
+.input_address,
+.input_city,
+.input_country,
+.input_confirm_number {
   padding: 0.3rem 1rem;
   border: none;
   outline: none;
@@ -346,7 +356,19 @@ label {
 .input_webUrl:hover,
 .input_webUrl:active,
 .input_fav_number:hover,
-.input_fav_number:active {
+.input_fav_number:active,
+.input_confirm_email:hover,
+.input_confirm_email:active,
+.input_zip:hover,
+.input_zip:active,
+.input_address:hover,
+.input_address:active,
+.input_city:hover,
+.input_city:active,
+.input_country:hover,
+.input_country:active,
+.input_confirm_number:hover,
+.input_confirm_number:active {
   background-color: #c5f4f4e7;
   border-radius: 1rem;
 }
@@ -364,7 +386,13 @@ label {
 .input_phone::placeholder,
 .input_sexe::placeholder,
 .input_fav_number::placeholder,
-.input_webUrl::placeholder {
+.input_webUrl::placeholder,
+.input_confirm_email::placeholder,
+.input_zip::placeholder,
+.input_address::placeholder,
+.input_city::placeholder,
+.input_country::placeholder,
+.input_confirm_number::placeholder {
   text-align: center;
   font-style: italic;
   font-size: 1.6rem;
@@ -378,7 +406,12 @@ label {
 .input_phone:focus,
 .input_sexe:focus,
 .input_fav_number:focus,
-.input_webUrl:focus {
+.input_webUrl:focus,
+.input_confirm_email:focus,
+.input_address:focus,
+.input_city:focus,
+.input_country:focus,
+.input_confirm_number:focus {
   border-bottom: 0.2rem solid #b6b6f6;
 }
 
@@ -390,7 +423,13 @@ label {
 .input_phone:invalid,
 .input_sexe:invalid,
 .input_fav_number:invalid,
-.input_webUrl:invalid {
+.input_webUrl:invalid,
+.input_confirm_email:invalid,
+.input_zip:invalid,
+.input_address:invalid,
+.input_city:invalid,
+.input_country:invalid,
+.input_confirm_number:invalid {
   border-bottom: 0.2rem solid #eb4d25;
 }
 
@@ -402,8 +441,20 @@ label {
 .input_phone:valid,
 .input_sexe:valid,
 .input_fav_number:valid,
-.input_webUrl:valid {
+.input_webUrl:valid,
+.input_confirm_email:valid,
+.input_zip:valid,
+.input_address:valid,
+.input_city:valid,
+.input_country:valid,
+.input_confirm_number:valid {
   border-bottom: 0.2rem solid #576154;
+}
+
+.info-alert,
+.info-alert_pwd {
+  font-size: 1.4rem;
+  color: #f00;
 }
 
 .btn-row {

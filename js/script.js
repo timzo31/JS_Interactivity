@@ -188,13 +188,80 @@ if (nb_electors.length > 0) {
 const inputName = document.querySelector(".input_name");
 const username = document.querySelector(".username");
 const welcomeMsg = document.querySelector(".welcome_msg");
-const welcomeBox = document.querySelector(".welcome-box");
+const email = document.querySelector(".input_email");
+const confirmEmail = document.querySelector(".input_confirm_email");
+const password = document.querySelector(".input_password");
+const confirmPassword = document.querySelector(".input_confirm_pwd");
+const dateOfBirth = document.querySelector(".input_birthday");
+const sexe = document.querySelector(".input_sexe");
+const address = document.querySelector(".input_address");
+const zipCode = document.querySelector(".input_zip");
+const favNumber = document.querySelector(".input_fav_number");
+const favColor = document.querySelector(".input_fav_color");
+const infoAlert = document.querySelector(".info-alert");
+const infoAlertPwd = document.querySelector(".info-alert_pwd");
+const inputConfirNumber = document.querySelector(".input_confirm_number");
+const inputResetOptPhone = document.querySelector(".input_pwd_res_phone");
+const inputPhone = document.querySelector(".input_phone");
+const formRowConfNumb = document.querySelector(".form_row_conf");
 
-if (inputName.length != 0) {
-  const html = `
-      <p class="welcome_msg">
-        Hello <span class="username">${inputName}</span>, Welcome to Javascript Interactivity Course.
-      </p>
-  `;
-  welcomeBox.insertAdjacentHTML("afterbegin", html);
-}
+// Checking emails conformity
+const checkEmail = function () {
+  const email1 = email;
+  const email2 = confirmEmail;
+  if (email1.value != email2.value) {
+    infoAlert.innerHTML = `Emails don't match !!!`;
+    return false;
+  } else {
+    infoAlert.innerHTML = ``;
+    return true;
+  }
+};
+// Checking Password conformity
+const checkPassword = function () {
+  if (password.value != confirmPassword.value) {
+    infoAlertPwd.innerHTML = `Passwords don't match !!!`;
+    return false;
+  } else {
+    infoAlert.innerHTML = ``;
+    return true;
+  }
+};
+
+// Country Option Set Function
+const inputCountry = document.querySelector(".input_country");
+const countrySet = () => {
+  const { country } = inputCountry.dataset;
+  if (country) {
+    console.log(country.value);
+  }
+};
+
+// Reset Option Popup
+const resetOptionPhone = function () {
+  if (inputResetOptPhone.checked) {
+    formRowConfNumb.classList.remove("hidden");
+    inputConfirNumber.textContent = `${inputPhone.value}`;
+    inputConfirNumber.setAttribute("required", true);
+  } else {
+    formRowConfNumb.classList.add("hidden");
+    inputConfirNumber.textContent = ``;
+  }
+};
+
+// const welcomeBox = document.querySelector(".welcome-box");
+
+// if (inputName.length != 0) {
+//   const html = `
+//       <p class="welcome_msg">
+//         Hello <span class="username">${inputName}</span>, Welcome to Javascript Interactivity Course.
+//       </p>
+//   `;
+//   welcomeBox.insertAdjacentHTML("afterbegin", html);
+// }
+
+// const birthday = Date();
+// const birth = birthday.split(" ");
+// console.log(birthday, birth);
+// const dateFormat = `${birth[2]}/${birth[1]}/${birth[3]}`;
+// console.log(dateFormat);
